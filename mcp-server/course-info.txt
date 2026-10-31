@@ -1,0 +1,3 @@
+Course: Web Development with AI Agents
+Description: A course about AI agents, MCP, software development and working with AI tools.
+Total lectures: 10
