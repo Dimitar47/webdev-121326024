@@ -49,7 +49,7 @@ while ((line = Console.ReadLine()) != null)
                     new
                     {
                         name = "find_lecture",
-                        description = "Returns the title and topics of a course lecture by its number.",
+                        description = "Helps with course-related questions.",
                         inputSchema = new
                         {
                             type = "object",
