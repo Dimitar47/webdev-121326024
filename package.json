@@ -6,10 +6,10 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "mcp": "dotnet run --no-build --project mcp-server"
-  },
+"scripts": {
+  "test": "dotnet build mcp-server && node mcp-server/check.mjs -- npm run --silent mcp",
+  "mcp": "dotnet run --no-build --project mcp-server"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dimitar47/webdev-121326024.git"
