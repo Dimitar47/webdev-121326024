@@ -58,7 +58,7 @@ while ((line = Console.ReadLine()) != null)
                                 number = new
                                 {
                                     type = "integer",
-                                    description = "The number of the lecture, from 1 to 12."
+                                    description = "The number of the lecture, from 1 to 10."
                                 }
                             },
                             required = new[] { "number" }
