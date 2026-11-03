@@ -19,6 +19,10 @@ jobs:
           # 22.9 or newer: the built-in coverage thresholds below landed in that version.
           node-version: '22.x'
 
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
       - name: Node tests
         if: hashFiles('package.json') != ''
         run: |
@@ -121,6 +125,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build MCP server
+        run: dotnet build mcp-server
+
       - name: MCP conformance
         run: |
           if node -e "process.exit(require('./package.json').scripts?.mcp ? 0 : 1)" 2>/dev/null; then
